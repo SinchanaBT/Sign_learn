@@ -16,16 +16,16 @@ const Learn = () => {
 
       case "colour":
         return [
-          "Black",
-          "Blue",
-          "Brown",
-          "Green",
-          "Orange",
-          "Pink",
-          "Purple",
-          "Red",
-          "White",
-          "Yellow",
+          "black",
+          "blue",
+          "brown",
+          "green",
+          "orange",
+          "pink",
+          "purple",
+          "red",
+          "white",
+          "yellow",
         ];
 
       case "familymembers":
@@ -137,7 +137,6 @@ const Learn = () => {
                 e.target.style.display = "none";
               }}
             />
-
               <p className="mt-2 font-semibold">
                 {item.charAt(0).toUpperCase() + item.slice(1)}
               </p>
