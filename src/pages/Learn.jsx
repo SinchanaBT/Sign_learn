@@ -30,20 +30,20 @@ const Learn = () => {
 
       case "familymembers":
         return [
-          "Aunty",
-          "Brother",
-          "Daughter",
-          "Father",
-          "Grandma",
-          "Grandpa",
-          "Mom",
-          "Sister",
-          "Son",
-          "Uncle",
+          "aunty",
+          "brother",
+          "daughter",
+          "father",
+          "grandma",
+          "grandpa",
+          "mom",
+          "sister",
+          "son",
+          "uncle",
         ];
 
       default:
-        return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
+        return "abcdefghijklmnopqrstuvwxyz".split("");
     }
   };
 
@@ -130,7 +130,7 @@ const Learn = () => {
               }`}
             >
             <img
-              src={`/signs/${category}/${item.toLowerCase()}.jpeg`}
+              src={`/signs/${category}/${item}.jpeg`}
               alt={item}
               className="h-32 w-32 object-contain mx-auto"
               onError={(e) => {
@@ -138,7 +138,9 @@ const Learn = () => {
               }}
             />
 
-              <p className="mt-2 font-semibold">{item}</p>
+              <p className="mt-2 font-semibold">
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </p>
 
               {learned[category]?.includes(item) && (
                 <p className="text-green-500 font-medium text-sm">
