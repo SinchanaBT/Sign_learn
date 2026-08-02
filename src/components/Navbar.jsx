@@ -1,6 +1,5 @@
 import { Link } from "react-router-dom";
 import { useState, useEffect } from "react";
-import { Moon, Sun } from "lucide-react";
 
 function Navbar() {
   const [darkMode, setDarkMode] = useState(

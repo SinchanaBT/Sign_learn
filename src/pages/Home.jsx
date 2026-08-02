@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import Navbar from "../components/Navbar";
 
 function Home() {
-  const [darkMode, setDarkMode] = useState(
+  const [darkMode] = useState(
     localStorage.getItem("theme") === "dark"
   );
 

@@ -47,7 +47,7 @@ const Quiz = () => {
     const distractors = shuffle(all.filter((item) => item !== correct)).slice(0, 3);
     setChoices(shuffle([correct, ...distractors]));
     setImageSrc(`/signs/${category}/${correct.toLowerCase()}.jpeg`);
-  }, [questions, currentIndex, category]);
+  }, [questions, currentIndex, category, learnedItems]);
 
   const handleSelect = (option) => {
     const updated = [...answers];
