@@ -1,0 +1,22 @@
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Home from "./pages/Home";
+import Learn from "./pages/Learn";
+import Quiz from "./pages/Quiz";
+import Progress from "./pages/Progress";
+import About from "./pages/About";
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/learn" element={<Learn />} />
+        <Route path="/quiz" element={<Quiz />} />
+        <Route path="/progress" element={<Progress />} />
+        <Route path="/about" element={<About />} />
+      </Routes>
+    </Router>
+  );
+}
+
+export default App;
