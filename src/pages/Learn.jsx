@@ -129,14 +129,14 @@ const Learn = () => {
                   : "border-transparent"
               }`}
             >
-              <img
-                src={`/signs/${category}/${item.toLowerCase()}.jpeg`}
-                alt={item}
-                className="h-32 w-32 object-contain mx-auto"
-                onError={(e) => {
-                  e.target.style.display = "none";
-                }}
-              />
+            <img
+              src={`/signs/${category}/${item.toLowerCase()}.jpeg`}
+              alt={item}
+              className="h-32 w-32 object-contain mx-auto"
+              onError={(e) => {
+                e.target.style.display = "none";
+              }}
+            />
 
               <p className="mt-2 font-semibold">{item}</p>
 
