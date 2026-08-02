@@ -13,6 +13,7 @@ const Learn = () => {
     switch (cat) {
       case "numbers":
         return "0123456789".split("");
+
       case "colour":
         return [
           "Black",
@@ -26,6 +27,7 @@ const Learn = () => {
           "White",
           "Yellow",
         ];
+
       case "familymembers":
         return [
           "Aunty",
@@ -39,6 +41,7 @@ const Learn = () => {
           "Son",
           "Uncle",
         ];
+
       default:
         return "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split("");
     }
@@ -55,8 +58,15 @@ const Learn = () => {
 
   const markAsLearned = (item) => {
     const updated = { ...learned };
-    if (!updated[category]) updated[category] = [];
-    if (!updated[category].includes(item)) updated[category].push(item);
+
+    if (!updated[category]) {
+      updated[category] = [];
+    }
+
+    if (!updated[category].includes(item)) {
+      updated[category].push(item);
+    }
+
     setLearned(updated);
     localStorage.setItem("learnedItems", JSON.stringify(updated));
   };
@@ -124,12 +134,16 @@ const Learn = () => {
                 alt={item}
                 className="h-32 w-32 object-contain mx-auto"
                 onError={(e) => {
-                  e.target.src = `/signs/${category}/${item}.png`;
+                  e.target.style.display = "none";
                 }}
               />
+
               <p className="mt-2 font-semibold">{item}</p>
+
               {learned[category]?.includes(item) && (
-                <p className="text-green-500 font-medium text-sm">✔ Learned</p>
+                <p className="text-green-500 font-medium text-sm">
+                  ✔ Learned
+                </p>
               )}
             </div>
           ))}
